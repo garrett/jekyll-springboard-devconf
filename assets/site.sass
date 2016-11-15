@@ -47,6 +47,7 @@ $content-width: 60rem
   .masthead
     background: #eee
     position: fixed
+    z-index: 1000
     width: 100%
     border-bottom: 1px solid #ccc
     box-shadow: 0 -14px 20px black
@@ -157,7 +158,6 @@ html.headerblocks
     .page-content section
       margin: 0 $offset-negative
       padding: 0 $offset #{$spacing-unit * 2}
-      overflow: hidden
 
       > h2
         background: red
@@ -167,15 +167,30 @@ html.headerblocks
         text-align: center
         padding: 1ex 0
         color: #fff
-        background-color: rgba(69, 50, 195, 0.7)
+        background-color: #7b6ed4
         text-shadow: 0 2px 4px rgba(69, 50, 195, 0.3)
 
 .youtube-player
   position: relative
   z-index: 1
 
-.about-section, .registration-section, .testimonials-section, .brno-section, .faq-section, .faq-section, .sponsors-section
-
 .frontpage
-  section:nth-child(even)
-    background: #eee
+  .page-content section
+    position: relative
+    background: #fff
+
+    &:nth-child(even)
+      background: #eee
+
+$target-offset: 5rem
+
+*:target
+  margin-top: $target-offset * -1
+  z-index: -1
+
+  &:before
+    content: ""
+    display: block
+    height: $target-offset
+    margin-top: $target-offset * -1
+    visibility: hidden
