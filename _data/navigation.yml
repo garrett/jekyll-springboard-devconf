@@ -18,27 +18,28 @@
 
 - title: Telegram
   url: https://telegram.me/joinchat/B1He_UEkuB4fBfY1cKCXRw
-  class: fa fa-send-o
+  icon: nav/telegram
 
 - title: Twitter
   url: https://twitter.com/devconf_cz
-  class: fa fa-twitter
+  icon: nav/twitter
 
 - title: Facebook
   url: https://www.facebook.com/DevConf.cz
-  class: fa fa-facebook-official
+  icon: nav/facebook
 
 - title: YouTube
   url: https://www.youtube.com/channel/UCIHsqY_4eWeInVQnxZ7WSjg
-  class: fa fa-youtube-play
+  icon: nav/youtube
 
 - title: Google+
   url: https://plus.google.com/100374582019862201361
-  class: fa fa-google-plus
+  icon: nav/googleplus
 
 - title: GitHub
   url: https://github.com/kejbaly2/devconfcz
-  class: fa fa-github
+  icon: nav/github
 
 - title: Winter of Code
   url: http://www.winterofcode.com
+  icon: nav/winterofcode
