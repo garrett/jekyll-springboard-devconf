@@ -25,7 +25,7 @@ $grey-color-light: lighten($grey-color, 40%)
 $grey-color-dark: darken($grey-color, 25%)
 
 // Width of the content area
-$content-width: 60em
+$content-width: 60rem
 
 // Import partials from the `minima` theme.
 @import minima
@@ -40,31 +40,96 @@ $content-width: 60em
 @import lib/stickyfooter
 @import lib/scrollbar-on
 
-.masthead
-  display: flex
-  flex-direction: column-reverse
+@media screen and (max-width: $on-laptop)
+  .nav-menu img
+    display: none
 
-  .hgroup,
-  .nav-wrap
-    height: auto
-
-  .hgroup
-    margin: 8em auto 2em
-
-  .nav-wrap
-    z-index: 1000
+  .masthead
     background: #eee
     position: fixed
-    display: block
     width: 100%
+    border-bottom: 1px solid #ccc
+    box-shadow: 0 -14px 20px black
 
-    .active a
-      background-color: #ddd
+    .hgroup,
+    .nav-wrap
+      vertical-align: top
+
+    .hgroup
+      margin-bottom: 0
+      padding-bottom: 0
+
+      h1
+        margin: 0
+        position: relative
+        top: -0.25ex
+
+      a
+        padding-left: 1ex
+
+      img
+        max-width: auto
+        max-height: 2rem
+
+@media screen and (min-width: $on-laptop)
+  .masthead
+    display: flex
+    flex-direction: column-reverse
+
+    .hgroup,
+    .nav-wrap
+      height: auto
+
+    .hgroup
+      margin: 8em auto 2em
+
+    .nav-wrap
+      z-index: 1000
+      background: #eee
+      position: fixed
+      width: 100%
+      border-bottom: 1px solid #ccc
+      box-shadow: 0 -14px 20px black
+
+      .nav-menu
+        display: flex
+
+      a
+        color: #333
+        padding: 1.5ex 2ex
+
+      .nav-icon a
+        padding: 1.5ex 1.5ex
+
+        .label
+          display: none
+
+      .nav--code-of-conduct
+        margin-left: auto
+
+      .active a
+        background-color: #ddd
+
+      img
+        transition: filter 500ms
+        opacity: 0.6
+        height: 1.75ex
+        width: auto
+        -webkit-filter: grayscale(1) brightness(0.5) contrast(4)
+        filter: brightness(70%) grayscale(1) contrast(4) 
+
+      a:hover img
+        filter: none
+        -webkit-filter: none
+        opacity: 1
+
+      .nav--winter-of-code img
+        height: 2ex
 
 .post-title
   text-align: center
 
-.column-3
+ul.topics
   column-count: 4
   -moz-column-count: 4
   @media screen and (max-width: $on-laptop)
@@ -73,3 +138,40 @@ $content-width: 60em
   @media screen and (max-width: $on-palm)
     column-count: 2
     -moz-column-count: 2
+
+$offset: calc((100vw - #{$content-width} + #{$spacing-unit*3}) * 0.5)
+$offset-negative: calc((100vw - #{$content-width} + #{$spacing-unit*3}) * -0.5)
+
+html.headerblocks
+
+  .intro
+
+  .wrapper
+    //max-width: 100%
+
+  @media screen and (min-width: $content-width)
+    .page-content section
+      margin: 0 $offset-negative
+      padding: 0 $offset #{$spacing-unit * 2}
+      overflow: hidden
+
+      > h2
+        background: red
+        width: 100vw
+        margin-left: $offset-negative
+        margin-bottom: $spacing-unit
+        text-align: center
+        padding: 1ex 0
+        color: #fff
+        background-color: rgba(69, 50, 195, 0.7)
+        text-shadow: 0 2px 4px rgba(69, 50, 195, 0.3)
+
+.youtube-player
+  position: relative
+  z-index: 1
+
+.about-section, .registration-section, .testimonials-section, .brno-section, .faq-section, .faq-section, .sponsors-section
+
+.frontpage
+  section:nth-child(even)
+    background: #eee
