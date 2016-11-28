@@ -1,0 +1,46 @@
+- name: Till Maas
+  quote: |
+    It is a great conference to meet awesome people from around the
+    world with very good presentations and workshops about free and open
+    source software.
+    ... very well organized and Brno is also a nice city
+  description: |
+    Penetration Tester @ [RedTeam Pentesting](https://www.redteam-pentesting.de/) and [Fedora Contributor](https://fedoraproject.org/wiki/User:Till)
+    
+  social:
+    site: https://blog.till.name/
+    github: tyll
+    twitter: TillMaas
+    googleplus: TillMaas
+    linkedin: tillmaas
+
+- name: Alex Juncu
+  quote: |
+    It's like FOSDEM, just not as big, but better organized and very
+    centered to Red Hat because they organizing it
+  description: |
+    Kernel Technical Support Engineer @ Red Hat
+  social:
+    site: http://alexandru.juncu.ro/blog
+    slideshare: https://devconfcz2016.sched.org/speaker/alexj1
+    googleplus: alexandrujuncu
+    linkedin: alexandrujuncu
+
+- name: Ondrej Skopek
+  quote: |
+    Hands down the best FLOSS conference in the Czech Republic!
+  description: |
+    Intern at @ Microsoft, Student at MFF UK.
+  social:
+    site: http://oskopek.com/
+    twitter: oskopek
+    github: oskopek
+
+- name: Jostein Toftebakk
+  quote: |
+    Presentation of the hottest New Technologies as they are being made.
+  description: |
+    Linux System Administrator at [Brønnøysundregistrene](https://www.brreg.no/)
+  social:
+    site: https://www.venstre.no/person/jostein-toftebakk/
+    twitter: jostoftebakk
