@@ -32,6 +32,7 @@ $content-width: 60rem
 
 // Import grid (see http://gridlex.devlint.fr/ for docs)
 @import vendor/gridlex
+@import vendor/leaflet
 
 @import lib/nav
 @import lib/search
@@ -149,11 +150,6 @@ $offset-negative: calc((100vw - #{$content-width} + #{$spacing-unit*3}) * -0.5)
 
 html.headerblocks
 
-  .intro
-
-  .wrapper
-    //max-width: 100%
-
   @media screen and (min-width: $content-width)
     .page-content section
       margin: 0 $offset-negative
@@ -169,6 +165,13 @@ html.headerblocks
         color: #fff
         background-color: #7b6ed4
         text-shadow: 0 2px 4px rgba(69, 50, 195, 0.3)
+
+      &.venue-section
+        padding: 0
+
+        > h2
+          margin-left: 0
+          margin-bottom: 0
 
 .youtube-player
   position: relative
