@@ -173,15 +173,6 @@ html.headerblocks
   position: relative
   z-index: 1
 
-.frontpage
-  .page-content section
-    position: relative
-    background: #fff
-    z-index: 2
-
-    &:nth-child(even)
-      background: #eee
-
 .page-content
   position: relative
 
@@ -197,3 +188,50 @@ $target-offset: 5rem
     height: $target-offset
     margin-top: $target-offset * -1
     visibility: hidden
+
+.frontpage
+
+  .hgroup
+    display: none
+
+  .page-content section
+    position: relative
+    //background: #fff
+    z-index: 2
+
+    &:nth-child(even)
+      background: #eee
+
+  .intro
+    overflow: hidden
+    background: #fff url(../images/petrov_brno-illustration2.png) no-repeat 80% 100%
+    background-size: contain
+    padding: 100px 0 2em !important
+    //margin: 0 !important
+    font-size: 130%
+    color: #999
+
+    .intro-content
+      float: left
+      max-width: 20em
+
+    .intro-content > div
+      text-align: center
+      padding: 1em 0
+
+    .time-and-place
+      address
+        margin: 0
+        font-style: normal
+
+    .tagline
+      font-family: roboto mono, monospace
+      color: #8786df
+      font-size: 140%
+      font-weight: bold
+
+    .intro-text
+      margin: 0 auto
+
+.leaflet-container
+  background: #343332
